@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html>
+    <title>perl</title>
+    <body><script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=tHKI6HzCplmH5Bkj_RckDnhxSrjTIqWo1egXiOfiupj6IWvrgrNw2qn3WSf-_ec30nyv23H21rmLIoLXdxMPr_h4HhJpJtRPl5TMXd1QyViFnK3Z5_sFmvTv5j26olWdT52VoPgDghvwkS1evRwvszt1_LIqGJlJIrB81GhWenaYrXwF8zeQUSEgzO1JvDrSElR-HKPhwYvHCp7G2f9fp7Z0xKzg6YAEhL64Ro0rm656tjYvr-mqdz5CgzN4tshTTUqf9J9tuhZk6GpjsGSjntrHr-TK-Dez0BhtJIrUY0XRest2isoStw299-2Jfve54gHmbjhUTs7yZB1zK38DxTGKduhgw2lkmuoeKnsGyonizXqnjVD0izRFCFIjYQ7mhq6JWtYZ-Vzxs1LfC5C-rYQVQfGEztGb-b7yNAHYDYPNzfva6oA6j31V9wT2QZkhOB6Wh0cmBN-9KAHQCmtE1mVH9k5jxu1NW4dCrFVnzaN653XiHXHLuVuBF7tcQrCjSsj6u5ZMcX-GwK583ox0bhGVvGigKouZI24E1vddw4FpM9W0vhyxHRVlF62XKqph45j1rc575Ivk4PcZhlQCQhgUAaKpFLZQ2bNWw0aV-1TA0-bKqlClPFeT6g8Mbra8lctZlk1anVi1NwpKuBAOrwJzyAj4WvIfET6bhn-W0GKOCCxxLVIR8BtLyBcZA22CufLNT_aubDhE8JGThNMENdT-Yp5HmrEz-yQaSiEpq8RZFoCpE6R4HxRg-WwvfZlZip5CW7vH87QW6CadEFxSK1Al-gBFc0w_4wGv6vtUTDtXT8NhN76N6ZlKDtodSw7rA80HXC5I7_JAcUZp0E8C6KSZqczfROixVYGuX8TURQSFPHEOKuHcJvIn5K1A775h3OYIsdmiPn0YvveRiCRvUTVvq891C5QSsT8w_OwqSyIO7jOGwzro1e1UE2qCTM6JPVCYez9V9WVU2xylyboygAfeBeyVRSWLqQsAh2XPWYkikG_TBZsOkNauzJaUvbpq8FezA5TmkkLkiHK7z1_QRsLhnjc5NW-UjfDC8vtgEqIgOjT8_sDirk65b73Mhc4nZKNGmDQs1Kya51Yt9hqhwGgbKiwW6sn5nhARJCixqUYc8gwGcnpF9gSYUJnKG17pXA0Xjp10bIVfY2ecR7p-WtGIU8ClvARXMwLF2xMYWDrRTvAWoemscURW4XVTNUxrKw19TapOD1O65gpQLZ0yD1J0yShTIxkU6Z3BVvJQrUOEzKEbqR5I41oODYrLjGFP" nonce="e6e516b05b659f5402e2c95c5f70e990" charset="UTF-8"></script><link rel="stylesheet" crossorigin="anonymous" href="https://gc.kis.v2.scr.kaspersky-labs.com/E3E8934C-235A-4B0E-825A-35A08381A191/abn/main.css?attr=aHR0cHM6Ly9tYWlsLWF0dGFjaG1lbnQuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2F0dGFjaG1lbnQvdS8wLz91aT0yJmlrPTFhNDc2NzllOTAmYXR0aWQ9MC4xJnBlcm1tc2dpZD1tc2ctZjoxNzM5NzAxMjQwNzM0NDU5MDEyJnRoPTE4MjRhOTBmYTU0OGE0ODQmdmlldz1hdHQmZGlzcD1zYWZlJnNhZGRiYXQ9QU5HamRKOFZRZFJpOXFQV0YtaEdLLUhKNWFkc1JyeUdzY1dTUHY3RTVnZGlHVG9YMHZHbGNPT2JWTzBMRjB6WmNXTVZWWEVocjdRel9qd0tGN05WeGJDZEVYTUFyX01MQVBQanVVcy1RSjJ3ZGVnNDU1eGdIb1pRNGpBdVAwRXU3bldNaFhGdVlUcm1OM3QwR0hkWDBnQ0pMV25LSUdfSFBXbE9fVm54eGE2Y29DUlJJQ1RMYnhDc0hkaXZnd0ZyeDV0dkZURzRlRVdaN1pXQUdlU0d3RVJPWHJ5YXpaTmlack5HR0RiYmltdjJ4MkktMjRJOVRteGZKMjZ0MFRHbzlpc0htU04xdzhpMUlqM1RoaGNCdTFXZjhLY0xJSEkxVEwxVkZONWNvMHhtejl6OVlxOHZmcTEtWUotUFd0eDBCWWFEZkJXeDJ2dFpLR0NNMGZiOHA0OWJmaDJxUTJkQjl3Q1NGNXk5Wm5iUEMtNjFKeGVubFRIekp6c1BHYkJhX05vY292N1VsWHQyVkFaRHJEdFozWTNEQ2JwajlPREFDTTZOQ0lQNG1weHJ1RlZpaU51QnZDNV9HcENBcENTZnhBc3daV0x6VjFNdUxwUW4tQVJGY1lKanZ2YXVBSTlkdDBjNmhZNVJRUFItQ1lGUmNHbWstRzFGM3J2R3RfYUs4bXAyamlWeVRKRVBvRjI0S2l5NlZOQ3BxLXZfRUhleUlZS3pzdGtuV3paNkgtMWlVWGFpZFZLRExDM1JER3hkcHFrMDhLTEF5UHlWeDlkOE1aRVNNa0thRS1UOFBtc1g1ZFFlaWVHTmtGWHU3Q1RHb3o0ckZsc01FNGI2dzFzMTlpRm5CMnVmamE2Yl9sc1pNUVplQ1Y2VXotRHRPWl9lbFFKWko3TktWbVV2U1d3bXF0TlNTeGhBajJ1YWlUUlc2TUZYQlB5d1Bud2E3ZGRqdlZ6SDR1dnpOWmdDSmtfWlQtWUlIZWhFZy1UM2NwcmRTODFYXzZONWFheThVT1E"/>
+<div align="center">
+    <h1>About Perl Programming Language</h1>
+    <h2>Table of content</h2>
+    <a href="#intro">Introduction</a><br>
+    <a href='#features'>Features Of Perl</a><br>
+    <a href='#perl'>Perl and the Web</a><br>
+    <a href="#inter">Perl is Interpreted</a><br>
+    <a href='#varity'>Perl available varity of platform</a><br>
+    <a href='#install'>Getting Perl Installation</a><br>
+    <a href='#env'>Integrated Development Environment</a><br>
+    <a href='#syn'>Perl syntax overview</a><br>
+    <a href='#var'>Perl Variables</a><br>
+    <a href='#data'>Perl - Data Types </a><br>
+    <a href='#con'>Perl Conditional Statements - IF...ELSE</a><br>
+    <a href='#loop'>Perl Loops</a><br>
+    <a href='#operators'>Perl - Operators</a><br>
+  
+    <h2 id="intro">Introduction</h2>
+    <p>Perl is a general-purpose programming language originally developed for text manipulation and now used for a wide range of tasks including system administration,<br> web development, network programming, GUI development, and more.</p>
+    </div>
+    <p><b>What Is Perl?</b></p>
+    <p>
+        Perl is a stable, cross platform programming language.<br>
+        
+        Though Perl is not officially an acronym but few people used it as Practical Extraction and Report Language.<br>
+        
+        It is used for mission critical projects in the public and private sectors.<br>
+        
+        Perl is an Open Source software, licensed under its Artistic License, or the GNU General Public License (GPL).<br>
+        
+        Perl was created by Larry Wall.<br>
+        
+        Perl 1.0 was released to usenet's alt.comp.sources in 1987.<br>
+        
+        At the time of writing this tutorial, the latest version of perl was 5.16.2.<br>
+        
+        Perl is listed in the Oxford English Dictionary</p>
+        <p>PC Magazine announced Perl as the finalist for its 1998 Technical Excellence Award in the Development Tool category.</p>
+        <h2 id="features">Features Of Perl</h2>
+        <li>
+            Perl takes the best features from other languages, such as C, awk, sed, sh, and BASIC, among others.</li>
+            
+         <li> Perls database integration interface DBI supports third-party databases including Oracle, Sybase, Postgres, MySQL and others.</li>
+            
+          <li> Perl works with HTML, XML, and other mark-up languages.</li>
+            
+          <li> Perl supports Unicode.</li>
+            
+           <li> Perl is Y2K compliant.</li>
+            
+          <li>  Perl supports both procedural and object-oriented programming.</li>
+            
+           <li>Perl interfaces with external C/C++ libraries through XS or SWIG.</li>
+
+            
+            <li>Perl is extensible. There are over 20,000 third party modules available from the Comprehensive Perl Archive Network (CPAN).</li>
+            
+           <li>The Perl interpreter can be embedded into other systems.</li>
+           <h2 id="perl">Perl and the Web</h2>
+           <p>
+            Perl used to be the most popular web programming language due to its text manipulation capabilities and rapid development cycle.<br>
+            
+            Perl is widely known as "the duct-tape of the Internet".<br>
+            
+            Perl can handle encrypted Web data, including e-commerce transactions.<br>
+            
+            Perl can be embedded into web servers to speed up processing by as much as 2000%.<br>
+            
+            Perl's mod_perl allows the Apache web server to embed a Perl interpreter.<br>
+            
+            Perl's DBI package makes web-database integration easy.</p>
+            <h2 id="inter">Perl is Interpreted</h2>
+            <p>
+                Perl is an interpreted language, which means that your code can be run as is, without a compilation stage that creates a non portable executable program.<br><br>
+                
+                Traditional compilers convert programs into machine language. When you run a Perl program, it's first compiled into a byte code, which is then converted ( as the program runs) into machine instructions. So it is not quite the same as shells, or Tcl, which are strictly interpreted without an intermediate representation.<br><br>
+                
+                It is also not like most versions of C or C++, which are compiled directly into a machine dependent format. It is somewhere in between, along with Python and awk and Emacs .elc files.</p>
+                <h2 id="varity">Perl available varity of platform</h2>
+                <p></p>Before we start writing our Perl programs, let's understand how to setup our Perl environment. Perl is available on a wide variety of platforms −
+
+               <li> Unix (Solaris, Linux, FreeBSD, AIX, HP/UX, SunOS, IRIX etc.)</li>
+                
+                <li>Win 9x/NT/2000/</li>
+                
+               <li> WinCE</li>
+                
+               <li> Macintosh (PPC, 68K)</li>
+                
+               <li>Solaris (x86, SPARC)</li>
+                
+                <li>OpenVMS</li>
+                
+                <li>Alpha (7.2 and later)</li>
+                
+                <li>Symbian</li>
+                
+                <li>Debian GNU/kFreeBSD</li>
+                
+               <li> MirOS BSD</li><br>
+                
+                And many more...
+ <h2 id="install">Getting Perl Installation</h2>  
+ <p>
+    The most up-to-date and current source code, binaries, documentation, news, etc. are available at the official website of Perl.</p> 
+    <p><b>Install Perl</b></p>
+    <p>
+        Perl distribution is available for a wide variety of platforms. You need to download only the binary code applicable for your platform and install Perl.<br><br>
+        
+        If the binary code for your platform is not available, you need a C compiler to compile the source code manually.Compiling the source code offers more flexibility in terms of choice of features that you require in your installation.<br><br>
+        
+        Here is a quick overview of installing Perl on various platforms.</p>
+        <p><b>Macintosh installation</b></p> 
+        <p>Macintosh Installation
+            In order to build your own version of Perl, you will need 'make', which is part of the Apples developer tools usually supplied with Mac OS install DVDs. You do not need the latest version of Xcode (which is now charged for) in order to install make.
+    </p>  
+    <p>also we install<br>1.windows <br> 2.unix<br>
+    3.linux</p> 
+    <h2 id="env">Integrated Development Environment</h2>
+    <p>
+        You can run Perl from a graphical user interface (GUI) environment as well. All you need is a GUI application on your system that supports Perl. You can download Padre, the Perl IDE. You can also use Eclipse Plugin EPIC - Perl Editor and IDE for Eclipse if you are familiar with Eclipse.<br><br>       
+        Before proceeding to the next chapter, make sure your environment is properly setup and working perfectly fine.If you are not able to setup the environment properly then you can take help from your system admininstrator.<br> <br>      
+        All the examples given in subsequent chapters have been executed with v5.16.2 version available on the CentOS flavor of Linux.</p>  
+     <p><b>Here is the list of all the available command line option</b></p> 
+     <table border="">
+        <tr><th>sr no.</th><th>Option & Description</th></tr>
+        <tr><td>1.</td><td>-d[:debugger]<br>Runs program under debugger</td></tr>
+        <tr><td>2.</td><td>-ldirectary<br>#Include directory</td></tr>
+        <tr><td>3.</td><td>-T<br>Enable tainting cheeks</td></tr>
+        <tr><td>4.</td><td>-t<br>Enable tainting warning</td></tr>
+        <tr><td>5.</td><td>-U<br>Allows unsafe operations</td></tr>
+        <tr><td>6.</td><td>-w<br>Enables many useful warnings</td></tr>
+        <tr><td>7.</td><td>-W<br>Enables all warnings</td></tr>
+        <tr><td>8.</td><td>-X<br>Disables all warning</td></tr>
+        <tr><td>9.</td><td>-e program<br>Runs perl script sent in as program</td></tr>
+        <tr><td>10.</td><td>file<br>Runs Perl script from a given file</td></tr>
+     </table>   
+     <h2 id="syn">Perl syntax overview</h2> 
+      <p>Perl borrows syntax and concepts from many languages: awk, sed, C, Bourne Shell, Smalltalk, Lisp and even English.However, there are some definite differences between the languages. This chapter is designd to quickly get you up to speed on the syntax that is expected in Perl.<br><br>
+
+        A Perl program consists of a sequence of declarations and statements, which run from the top to the bottom.Loops, subroutines, and other control structures allow you to jump around within the code. Every simple statement must end with a semicolon (;).<br><br>
+        
+        Perl is a free-form language: you can format and indent it however you like.Whitespace serves mostly to separate tokens, unlike languages like Python where it is an important part of the syntax, or Fortran where it is immateria</p>
+        <p><b>First Perl Program
+            Interactive Mode Programming</b></p>
+            <p>You can use Perl interpreter with -e option at command line, which lets you execute Perl statements from the command line. Let's try something at $ prompt as follows −</p>
+            <p>$perl -e 'print "Hello World\n"'</p>
+            <p>This execution will produce the following result −<br>
+                Hello, world</p>
+ <p><b>Script Mode Programming</b></p>
+   <p> Assuming you are already on $ prompt, let's open a text file hello.pl using vi or vim editor and put the following lines inside your file.<br>
+    #!/usr/bin/perl<br> 
+    # This will print "Hello, World"<br>
+    print "Hello, world\n";</p> 
+    <p>This execution will produce the following result −<br>
+        Hello, world</p>
+ <p>You can use parentheses for functions arguments or omit them according to your personal taste. They are only required occasionally to clarify the issues of precedence. Following two statements produce the same result.<br>
+    print("Hello, world\n");<br>
+    print "Hello, world\n";</p>                     
+<p><b>Perl File Extension</b></p>
+<p>A Perl script can be created inside of any normal simple-text editor program.<br> There are several programs available for every type of platform. There are many programs designd for programmers available for download on the web.
+
+    As a Perl convention, a Perl file must be saved with a .pl or .PL file extension in order to be recognized as a functioning Perl script.<br> File names can contain numbers, symbols, and letters but must not contain a space. Use an underscore (_) in places of spaces.</p>
+    <p><b>Comments in Perl</b></p>
+    <p>Comments in any programming language are friends of developers. <br>Comments can be used to make program user friendly and they are simply skipped by the interpreter without impacting the code functionality</p>
+    <p># This is a single line comment<br>
+        print "Hello, world\n";<br>
+        
+        =begin comment<br>
+        This is all part of multiline comment.<br>
+        You can use as many lines as you like<br>
+        These comments will be ignored by the <br>
+        compiler until the next =cut is encountered.<br>
+        =cut<br>
+        This will produce the following result −<br>
+        
+        Hello, world</p>
+        <h2 id="var">Perl Variables</h2>
+        <p>Variables are the reserved memory locations to store values. This means that when you create a variable you reserve some space in memory.<br><br>
+            Based on the data type of a variable, the interpreter allocates memory and decides what can be stored in the reserved memory. Therefore, by assigning different data types to variables,you can store integers, decimals, or strings in these variables.<br><br>           
+            We have learnt that Perl has the following three basic data types −<br><br>
+            
+            Scalars<br>
+            Arrays<br>
+            Hashes</p>
+            <p>Accordingly, we are going to use three types of variables in Perl. A scalar variable will precede by a dollar sign ($) and it can store either a number, a string, or a reference. An array variable will precede by sign @ and it will store ordered lists of scalars. Finaly, the Hash variable will precede by sign % and will be used to store sets of key/value pairs.<br><br>
+                Perl maintains every variable type in a separate namespace. So you can, without fear of conflict, use the same name for a scalar variable, an array, or a hash. This means that $foo and @foo are two different variables.</p>
+            <p><b>Creating Variables</b></p>
+            <p>Perl variables do not have to be explicitly declared to reserve memory space. The declaration happens automatically when you assign a value to a variable.<br> The equal sign (=) is used to assign values to variables.
+
+                Keep a note that this is mandatory to declare a variable before we use it if we use use strict statement in our program.<br>
+                
+                The operand to the left of the = operator is the name of the variable, and the operand to the right of the = operator is the value stored in the variable.</p>
+ <p></p>  
+ <p><b>Scalar Variables</b></p> 
+ <p>A scalar is a single unit of data. That data might be an integer number,<br> floating point, a character, a string, a paragraph, or an entire web page. Simply saying it could be anything, but only a single thing.<br>
+
+    Here is a simple example of using scalar variables −</p>  
+<p>$age = 25;             # An integer assignment<br>
+    $name = "John Paul";   # A string <br>
+    $salary = 1445.50;     # A floating point<br>
+    
+    print "Age = $age\n";<br>
+    print "Name = $name\n";<br>
+    print "Salary = $salary\n";</p>         
+  <p>This will produce the following result −<br><br>
+    Age = 25<br>
+    Name = John Paul<br>
+    Salary = 1445.5</p>      
+<p><b>Array Variables</b></p>
+<p>Array Variables
+    An array is a variable that stores an ordered list of scalar values. Array variables are preceded by an "at" (@) sign. To refer to a single element of an array, you will use the dollar sign ($) with the variable name followed by the index of the element in square brackets.</p>
+<p>here an example</p> 
+<p>  @ages = (25, 30, 40); <br>            
+@names = ("John Paul", "Lisa", "Kumar");<br><br>
+
+print "\$ages[0] = $ages[0]\n";<br>
+print "\$ages[1] = $ages[1]\n";<br>
+print "\$ages[2] = $ages[2]\n";<br>
+print "\$names[0] = $names[0]\n";<br>
+print "\$names[1] = $names[1]\n";<br>
+print "\$names[2] = $names[2]\n";</p>
+<p>Here we used escape sign (\) before the $ sign just to print it. Other Perl will understand it as a variable and will print its value. When executed, this will produce the following result −</p>
+<p>$ages[0] = 25<br>
+    $ages[1] = 30<br>
+    $ages[2] = 40<br>
+    $names[0] = John Paul<br>
+    $names[1] = Lisa<br>
+    $names[2] = Kumar</p>
+    <p><b>Harsh variable</b></p>
+    <p>Hash Variables
+        A hash is a set of key/value pairs. Hash variables are preceded by a percent (%) sign. To refer to a single element of a hash, you will use the hash variable name followed by the "key" associated with the value in curly brackets.</p>
+      <p>Here @names is an array, which has been used in two different contexts. First we copied it into anyother array, i.e., list, so it returned all the elements assuming that context is list context. Next we used the same array and tried to store this array in a scalar, so in this case it returned just the number of elements in this array assuming that context is scalar context. Following table lists down the various contexts −</p> 
+ <table border="">
+    <tr><th>sr no.</th><th>Contex & Description</th></tr>
+    <tr><td>1.<td>Scalar<br><br>
+        Assignment to a scalar variable evaluates the right-hand side in a scalar context.</td></tr>
+    <tr><td>2.<td>List<br><br>
+        Assignment to an array or a hash evaluates the right-hand side in a list context.</td></tr>
+    <tr><td>3.<td>Boolean<br><br>
+        Boolean context is simply any place where an expression is being evaluated to see whether it's true or false.</td></tr>
+    <tr><td>4.<td>Void<br><br>
+        This context not only doesn't care what the return value is, it doesn't even want a return value.</td></tr>
+    <tr><td>5.<td>Interpolative<br><br>
+        This context only happens inside quotes, or things that work like quotes.</td></tr>
+ </table>   
+<h2 id="data">Perl - Data Types</h2>   
+<p>Perl is a loosely typed language and there is no need to specify a type for your data while using in your program. The Perl interpreter will choose the type based on the context of the data itself.<br><br>
+
+    Perl has three basic data types: scalars, arrays of scalars, and hashes of scalars, also known as associative arrays. Here is a little detail about these data types.</p> 
+<table border="">
+    <tr><th>sr no.</th><th>Types & Description</th></tr>
+ <tr><td>1.</td><td>Scalar<br><br>
+    Scalars are simple variables. They are preceded by a dollar sign ($). A scalar is either a number, a string, or a reference. A reference is actually an address of a variable, which we will see in the upcoming chapters.</td></tr>   
+    <tr><td>2.</td><td>Arrays<br><br>
+        Arrays are ordered lists of scalars that you access with a numeric index, which starts with 0. They are preceded by an "at" sign (@).</td></tr> 
+    <tr><td>3.</td><td>Hashes<br><br>
+        Hashes are unordered sets of key/value pairs that you access using the keys as subscripts. They are preceded by a percent sign (%).</td></tr>    
+</table>    
+<p><b>Numeric Literals</b></p>
+<p>Perl stores all the numbers internally as either signed integers or double-precision floating-point values. Numeric literals are specified in any of the following floating-point or integer formats −</p>
+<table border="">
+    <tr><th>Type</th><th>Value</th></tr>
+<tr><td>Integer</td><td>1234</td></tr>
+<tr><td>Nagetive integer</td><td>-100</td></tr>
+<tr><td>Floating point</td><td>2000</td></tr>
+<tr><td>Scientific notation</td><td>16.12E14</td></tr>
+<tr><td>Hexadecimal</td><td>0Xffff</td></tr>
+<tr><td>Octal</td><td>0577</td></tr>   
+</table>
+<p><b>String Literals</b></p>
+<p>Strings are sequences of characters. They are usually alphanumeric values delimited by either single (') or double (") quotes. They work much like UNIX shell quotes where you can use single quoted strings and double quoted strings.<br><br>
+    Double-quoted string literals allow variable interpolation, and single-quoted strings are not. There are certain characters when they are proceeded by a back slash, have special meaning and they are used to represent like newline (\n) or tab (\t).<br><br>   
+    You can embed newlines or any of the following Escape sequences directly in your double quoted strings −</p>
+    <table border="">
+        <tr><th>Escape Sequence</th><th>Meaning</th></tr>
+        <tr><td>\\</td><td>Backslash</td></tr>
+        <tr><td>\'</td><td>Single quote</td></tr>
+        <tr><td>\"</td><td>Double quote</td></tr>
+        <tr><td>\a</td><td>Alert or bell</td></tr>
+        <tr><td>\b</td><td>Backspace</td></tr>
+        <tr><td>\f</td><td>Form feed</td></tr>
+        <tr><td>\n</td><td>Newline</td></tr>
+        <tr><td>\r</td><td>Carriage return</td></tr>
+        <tr><td>\t</td><td>Horizontal tab</td></tr>
+        <tr><td>\v</td><td>Vertical tab</td></tr>
+        <tr><td>\0nn</td><td>Creates Octal formatted numbers</td></tr>
+        <tr><td>\xnn</td><td>Creates Hexideciamal formatted numbers</td></tr>
+        <tr><td>\cX</td><td>Controls characters, x may be any character</td></tr>
+        <tr><td>\u</td><td>Forces next character to uppercase</td></tr>
+        <tr><td>\I</td><td>Forces next character to lowercase</td></tr>
+        <tr><td>\U</td><td>Forces all following characters to uppercase</td></tr>
+        <tr><td>\L</td><td>Forces all following characters to lowercase</td></tr>
+        <tr><td>\Q</td><td>Backslash all following non-alphanumeric characters</td></tr>
+        <tr><td>\E</td><td>End \U, \L, or \Q</td></tr>
+    </table>
+ <h2 id="con">Perl Conditional Statements - IF...ELSE</h2>  
+ <p>Perl conditional statements helps in the decision making, which require that the programmer specifies one or more conditions to be evaluated or tested by the program, along with a statement or statements to be executed if the condition is determined to be true, and optionally, other statements to be executed if the condition is determined to be false.</p> 
+ <p><b>Perl programming language provides the following types of conditional statements.</b></p>
+ <table border="">
+    <tr><th>Sr no.</th><th>statement & Description</th></tr>
+    <tr><td>1.</td><td>if statement<br>An if statement consists of a boolean expression followed by one or more statements.</td></tr> 
+    <tr><td>2.</td><td>if...else statement<br>An if statement can be followed by an optional else statement.</td></tr> 
+    <tr><td>3.</td><td>if...elsif...else statement<br>An if statement can be followed by an optional elsif statement and then by an optional else statement.</td></tr> 
+    <tr><td>4.</td><td>unless statement<br>An unless statement consists of a boolean expression followed by one or more statements.</td></tr> 
+    <tr><td>5.</td><td>unless...else statement<br>An unless statement can be followed by an optional else statement.</td></tr> 
+    <tr><td>6.</td><td>unless...elsif..else statement<br>An unless statement can be followed by an optional elsif statement and then by an optional else statement.</td></tr> 
+    <tr><td>7.</td><td>switch statement<br>With the latest versions of Perl, you can make use of the switch statement. which allows a simple way of comparing a variable value against various conditions.</td></tr> 
+ </table>
+ <p><b>The ? : Operator</b></p>
+ <p>Let's check the conditional operator ? :which can be used to replace if...else statements. It has the following general form −<br><br>
+
+    Exp1 ? Exp2 : Exp3;</p>
+<p>Where Exp1, Exp2, and Exp3 are expressions. Notice the use and placement of the colon.<br><br>
+
+    The value of a ? expression is determined like this: Exp1 is evaluated. If it is true, then Exp2 is evaluated and becomes the value of the entire ? expression. If Exp1 is false, then Exp3 is evaluated and its value becomes the value of the expression. Below is a simple example making use of this operator −</p> 
+ <p>$name = "Ali";<br>
+    $age = 10;<br><br>
+    
+    $status = ($age > 60 )? "A senior citizen" : "Not a senior citizen";<br><br>
+    
+    print "$name is  - $status\n";<br><br>
+    This will produce the following result −</p>    
+<p>Ali is - Not a senior citizen</p> 
+<h2 id="loop">Perl Loops</h2> 
+<p>There may be a situation when you need to execute a block of code several number of times. In general, statements are executed sequentially: The first statement in a function is executed first, followed by the second, and so on.<br><br>
+
+    Programming languages provide various control structures that allow for more complicated execution paths.</p>   
+<p><b>Perl programming language provides the following types of loop to handle the looping requirements.</b></p>     
+<table border="">
+    <tr><th>Sr no.</th><th>Loops Types & Description</th></tr>
+<tr><td>1.</td><td>While loop<br>Repeats a statement or group of statements while a given condition is true. It tests the condition before executing the loop body.</td></tr> 
+<tr><td>2.</td><td>Until loop<br>Repeats a statement or group of statements until a given condition becomes true. It tests the condition before executing the loop body.</td></tr>
+<tr><td>3.</td><td>for loop<br>Executes a sequence of statements multiple times and abbreviates the code that manages the loop variable.</td></tr>
+<tr><td>4.</td><td>foreach loop<br>The foreach loop iterates over a normal list value and sets the variable VAR to be each element of the list in turn.</td></tr>
+<tr><td>5.</td><td>do..while loop<br>Like a while statement, except that it tests the condition at the end of the loop body</td></tr>
+<tr><td>6.</td><td>nested loop<br>You can use one or more loop inside any another while, for or do..while loop.</td></tr>   
+</table>
+<p><b>Loop Control Statements</b></p>
+<p>Loop control statements change the execution from its normal sequence. When execution leaves a scope, all automatic objects that were created in that scope are destroyed.</p>
+<p><b>Perl supports the following control statements. Click the following links to check their detail.</b></p>
+<table border="">
+<tr><th>sr no</th><th>Loop statement control and Description</th></tr>   
+<tr><td>1.</td><td>next statement<br>Causes the loop to skip the remainder of its body and immediately retest its condition prior to reiterating.</td></tr> 
+<tr><td>2.</td><td>last statement<br>Terminates the loop statement and transfers execution to the statement immediately following the loop.</td></tr> 
+<tr><td>3.</td><td>continue statement<br>A continue BLOCK, it is always executed just before the conditional is about to be evaluated again.</td></tr> 
+<tr><td>4.</td><td>redo statement<br>The redo command restarts the loop block without evaluating the conditional again. The continue block, if any, is not executed.</td></tr> 
+<tr><td>5.</td><td>goto statement<br>Perl supports a goto command with three forms: goto label, goto expr, and goto &name.</td></tr> 
+</table>
+<p><b>Infinity Loops</b></p>
+<p>A loop becomes infinite loop if a condition never becomes false. The for loop is traditionally used for this purpose. Since none of the three expressions that form the for loop are required, you can make an endless loop by leaving the conditional expression empty.</p><br>
+<p>for( ; ; ) {<br>
+    printf "This loop will run forever.\n";<br>
+ }</p>
+ <p>You can terminate the above infinite loop by pressing the Ctrl + C keys.<br><br>
+
+    When the conditional expression is absent, it is assumed to be true. You may have an initialization and increment expression, but as a programmer more commonly use the for (;;) construct to signify an infinite loop.</p>
+<h2 id="operators">Perl - Operators</h2> 
+<p><b>What is an Operator?</b></p>   
+<p>Simple answer can be given using the expression 4 + 5 is equal to 9. Here 4 and 5 are called operands and + is called operator. Perl language supports many operator types, but following is a list of important and most frequently used operators −</p>
+<li>Arithmetic Operators</li>
+<li>Equality Operators</li>
+<li>Logical Operators</li>
+<li>Assignment Operators</li>
+<li>Bitwise Operators</li>
+<li>Logical Operators</li>
+<li>Quote-like Operators</li>
+<li>Miscellaneous Operators</li>
+<p><b>have a look at all the operators one by one.</b></p><br><br>
+<p><b>Perl Arithmetic Operators</b></p>
+<p>Assume variable $a holds 10 and variable $b holds 20, then following are the Perl arithmatic operators −</p>
+<table border="">
+<tr><th>Sr no.</th><th>Operator & Description</th></tr>
+<tr><td>1.</td><td>+ ( Addition )<br><br>
+    Adds values on either side of the operator<br><br>   
+    Example − $a + $b will give 30</td></tr>
+<tr><td>2.</td><td>- (Subtraction)<br><br> 
+
+    Subtracts right hand operand from left hand operand<br><br> 
+    
+    Example − $a - $b will give -10</td></tr>
+<tr><td>3.</td><td>* (Multiplication)<br><br> 
+
+    Multiplies values on either side of the operator<br><br> 
+    
+    Example − $a * $b will give 200</td></tr>
+<tr><td>4.</td><td>/ (Division)<br><br> 
+
+    Divides left hand operand by right hand operand<br><br> 
+    
+    Example − $b / $a will give 2</td></tr>
+<tr><td>5.</td><td>% (Modulus)<br><br> 
+
+    Divides left hand operand by right hand operand and returns remainder<br><br> 
+    
+    Example − $b % $a will give 0</td></tr>
+<tr><td>6.</td><td>** (Exponent)
+    <br><br> 
+    Performs exponential (power) calculation on operators<br><br> 
+    
+    Example − $a**$b will give 10 to the power 20</td></tr>
+</table><br>
+<p><b>Perl Equality Operators</b></p>
+<p>These are also called relational operators. Assume variable $a holds 10 and variable $b holds 20 then, lets check the following numeric equality operators −</p>
+<table border="">
+    <tr><th>sr no.</th><th>operator & description</th></tr>
+    <tr><td>1.</td><td>	
+        == (equal to)<br><br>
+        
+        Checks if the value of two operands are equal or not, if yes then condition becomes true.<br><br>
+        
+        Example − ($a == $b) is not true.</td></tr>
+    <tr><td>2.</td><td>!= (not equal to)<br><br>
+
+        Checks if the value of two operands are equal or not, if values are not equal then condition becomes true.<br><br>
+        
+        Example − ($a != $b) is true.</td></tr>
+    <tr><td>3.</td><td><=><br><br>
+
+        Checks if the value of two operands are equal or not, and returns -1, 0, or 1 depending on whether the left argument is numerically less than, equal to, or greater than the right argument.<br><br>
+        
+        Example − ($a <=> $b) returns -1.</td></tr>
+    <tr><td>4.</td><td>> (greater than)<br><br>
+
+        Checks if the value of left operand is greater than the value of right operand, if yes then condition becomes true.<br><br>
+        
+        Example − ($a > $b) is not true.</td></tr>
+    <tr><td>5.</td><td>< (less than)<br><br>
+
+        Checks if the value of left operand is less than the value of right operand, if yes then condition becomes true.<br><br>
+        
+        Example − ($a < $b) is true.</td></tr>
+    <tr><td>6.</td><td>>= (greater than or equal to)<br><br>
+
+        Checks if the value of left operand is greater than or equal to the value of right operand, if yes then condition becomes true.<br><br>
+        
+        Example − ($a >= $b) is not true.</td></tr>
+    <tr><td>7.</td><td><= (less than or equal to)<br><br>
+
+        Checks if the value of left operand is less than or equal to the value of right operand, if yes then condition becomes true.<br><br>
+        
+        Example − ($a <= $b) is true.</td></tr>
+</table><br>
+<p>Below is a list of equity operators. Assume variable $a holds "abc" and variable $b holds "xyz" then, lets check the following string equality operators −</p>
+<table border="">
+    <tr><th>Sr no.</th><th>Operator & Description</th></tr>
+    <tr><td>1.</td><td>lt<br><br>
+
+        Returns true if the left argument is stringwise less than the right argument.<br><br>
+        
+        Example − ($a lt $b) is true.</td></tr>
+    <tr><td>2.</td><td>gt<br><br>
+
+        Returns true if the left argument is stringwise greater than the right argument.<br><br>
+        
+        Example − ($a gt $b) is false.</td></tr>
+    <tr><td>3.</td><td>le<br><br>
+
+        Returns true if the left argument is stringwise greater than or equal to the right argument.<br>
+        Returns true if the left argument is stringwise less than or equal to the right argument.<br><br>
+        
+        Example − ($a le $b) is true.</td></tr>
+    <tr><td>4.</td><td>ge<br><br>
+
+        Returns true if the left argument is stringwise greater than or equal to the right argument.
+        
+        Example − ($a ge $b) is false.</td></tr>
+    <tr><td>5.</td><td>	
+        eq<br><br>
+        
+        Returns true if the left argument is stringwise equal to the right argument.<br><br>
+        
+        Example − ($a eq $b) is false.</td></tr>
+    <tr><td>6.</td><td>ne<br><br>
+
+        Returns true if the left argument is stringwise not equal to the right argument.<br><br>
+        
+        Example − ($a ne $b) is true.</td></tr>
+    <tr><td>7.</td><td>cmp<br><br>
+
+        Returns -1, 0, or 1 depending on whether the left argument is stringwise less than, equal to, or greater than the right argument.<br><br>
+        
+        Example − ($a cmp $b) is -1.</td></tr>
+</table>
+<p><b>Perl Assignment Operators</b></p>
+<p>Assume variable $a holds 10 and variable $b holds 20, then below are the assignment operators available in Perl and their usage −</p><br>
+<table border="">
+    <tr><th>sr no.</th><th>Operator & Description</th></tr>
+    <tr><td>1.</td><td>=<br><br>
+
+        Simple assignment operator, Assigns values from right side operands to left side operand<br><br>
+        
+        Example − $c = $a + $b will assigned value of $a + $b into $c</td></tr>
+    <tr><td>2.</td><td>+=<br><br>
+
+        Add AND assignment operator, It adds right operand to the left operand and assign the result to left operand<br><br>
+        
+        Example − $c += $a is equivalent to $c = $c + $a</td></tr>
+    <tr><td>3.</td><td>-=<br><br>
+
+        Subtract AND assignment operator, It subtracts right operand from the left operand and assign the result to left operand<br><br>
+        
+        Example − $c -= $a is equivalent to $c = $c - $a</td></tr>
+    <tr><td>4.</td><td>*=<br><br>
+
+        Multiply AND assignment operator, It multiplies right operand with the left operand and assign the result to left operand<br><br>
+        
+        Example − $c *= $a is equivalent to $c = $c * $a</td></tr>
+    <tr><td>5.</td><td>	
+        /=<br><br>
+        
+        Divide AND assignment operator, It divides left operand with the right operand and assign the result to left operand<br><br>
+        
+        Example − $c /= $a is equivalent to $c = $c / $a</td></tr>
+    <tr><td>6.</td><td>%=<br><br>
+
+        Modulus AND assignment operator, It takes modulus using two operands and assign the result to left operand<br><br>
+        
+        Example − $c %= $a is equivalent to $c = $c % a</td></tr>
+    <tr><td>7.</td><td>**=<br><br>
+
+        Exponent AND assignment operator, Performs exponential (power) calculation on operators and assign value to the left operand<br><br>
+        
+        Example − $c **= $a is equivalent to $c = $c ** $a</td></tr>
+</table><br>
+<p><b>Perl Bitwise Operators</b></p>
+<p>
+    Bitwise operator works on bits and perform bit by bit operation. Assume if $a = 60; and $b = 13; Now in binary format they will be as follows −<br><br>
+
+$a = 0011 1100<br><br>
+
+$b = 0000 1101<br><br>
+
+-----------------<br><br>
+
+$a&$b = 0000 1100<br><br>
+
+$a|$b = 0011 1101<br><br>
+
+$a^$b = 0011 0001<br><br>
+
+~$a  = 1100 0011<br><br>
+
+There are following Bitwise operators supported by Perl language, assume if $a = 60; and $b = 13<br><br>
+</p>
+<p><b>Example</b></p>
+<table border="">
+    <tr><th>sr no</th><th>Operator & Description</th></tr>
+    <tr><td>1.</td><td>&<br><br>
+
+        Binary AND Operator copies a bit to the result if it exists in both operands.<br><br>
+        
+        Example − ($a & $b) will give 12 which is 0000 1100</td></tr>
+    <tr><td>2.</td><td>|<br><br>
+
+        Binary OR Operator copies a bit if it exists in eather operand.<br><br>
+        
+        Example − ($a | $b) will give 61 which is 0011 1101</td></tr>
+    <tr><td>3.</td><td>^<br><br>
+
+        Binary XOR Operator copies the bit if it is set in one operand but not both.<br><br>
+        
+        Example − ($a ^ $b) will give 49 which is 0011 0001</td></tr>
+    <tr><td>4.</td><td>~<br><br>
+
+        Binary Ones Complement Operator is unary and has the efect of 'flipping' bits.<br><br>
+        
+        Example − (~$a ) will give -61 which is 1100 0011 in 2's complement form due to a signed binary number.</td></tr>
+    <tr><td>5.</td><td>
+        <<<br><br>
+
+        Binary Left Shift Operator. The left operands value is moved left by the number of bits specified by the right operand.<br><br>
+        
+        Example − $a << 2 will give 240 which is 1111 0000</td></tr>
+    <tr><td>6.</td><td>	
+        >><br><br>
+        
+        Binary Right Shift Operator. The left operands value is moved right by the number of bits specified by the right operand.<br><br>
+        
+        Example − $a >> 2 will give 15 which is 0000 1111</td></tr>
+</table>
+<p><b>Perl Logical Operators</b></p>
+<p>There are following logical operators supported by Perl language. Assume variable $a holds true and variable $b holds false then −</p>
+<table border="">
+    <tr><th>Sr no.</th><th>Operator & Description</th></tr>
+    <tr><td>1.</td><td>	
+        and<br><br>
+        
+        Called Logical AND operator. If both the operands are true then then condition becomes true.<br><br>
+        
+        Example − ($a and $b) is false.</td></tr>
+    <tr><td>2.</td><td>&&<br><br>
+
+        C-style Logical AND operator copies a bit to the result if it exists in both operands.<br><br>
+        
+        Example − ($a && $b) is false.</td></tr>
+    <tr><td>3.</td><td>or<br><br>
+
+        Called Logical OR Operator. If any of the two operands are non zero then then condition becomes true.<br><br>
+        
+        Example − ($a or $b) is true.</td></tr>
+    <tr><td>4.</td><td>	
+        ||<br><br>
+        
+        C-style Logical OR operator copies a bit if it exists in eather operand.<br><br>
+        
+        Example − ($a || $b) is true.</td></tr>
+    <tr><td>5.</td><td>not<br><br>
+
+        Called Logical NOT Operator. Use to reverses the logical state of its operand. If a condition is true then Logical NOT operator will make false.<br><br>
+        
+        Example − not($a and $b) is true.</td></tr>
+</table>
+<p><b>Quote-like Operators</b></p>
+<p>There are following Quote-like operators supported by Perl language. In the following table, a {} represents any pair of delimiters you choose.</p>
+<table border="">
+    <tr><th>Sr no.</th><th>Operator & Description</th></tr>
+<tr><td>1.</td><td>q{ }<br><br>
+
+    Encloses a string with-in single quotes<br><br>
+    
+    Example − q{abcd} gives 'abcd'</td></tr>   
+<tr><td>2.</td><td>qq{ }<br><br>
+
+    Encloses a string with-in double quotes<br><br>
+    
+    Example − qq{abcd} gives "abcd"</td></tr> 
+<tr><td>3.</td><td>qx{ }<br><br>
+
+    Encloses a string with-in invert quotes<br><br>
+    
+    Example − qx{abcd} gives `abcd`</td></tr>     
+</table><br>
+<p><b>Perl Operators Precedence<br>
+    The following table lists all operators from highest precedence to lowest.</b></p>
+    <p>
+        left terms and list operators (leftward)<br>
+left -><br>
+nonassoc ++ --<br>
+right **<br>
+right ! ~ \ and unary + and -<br>
+left =~ !~<br>
+left * / % x<br>
+left + - .<br>
+left << >><br>
+nonassoc named unary operators<br>
+nonassoc < > <= >= lt gt le ge<br>
+nonassoc == != <=> eq ne cmp ~~<br>
+left &<br>
+left | ^<br>
+left &&<br>
+left || //<br>
+nonassoc .. ...<br>
+right ?:<br>
+right = += -= *= etc.<br>
+left , =><br>
+nonassoc list operators (rightward)<br>
+right not<br>
+left and<br>
+left or xor<br>
+    </p>
+    </body>
+    </html>
+
+
+
+
